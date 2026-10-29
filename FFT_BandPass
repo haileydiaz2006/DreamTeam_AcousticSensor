@@ -1,3 +1,4 @@
+%% Acoustic Sensor
 clc;
 clear;
 close all;
@@ -13,20 +14,20 @@ f = (0:N-1)*(fs/N);
 % DFT
 X = fft(x);
 
-% IFFT to reconstruct the original signal
-x_reconstructed = ifft(X);
 
 % Filter frequencies between 3000 and 4000 Hz
-mask = (f >= 3000 & f <= 4000) | (f >= fs-4000 & f <= fs-3000);
+mask = (f >= 3000 & f <= 4000)...
+| (f >= fs-4000 & f <= fs-3000);  %% accounting for negative frequency pairs 
 
+% Only keeping selected frequencies
 X_filtered = X .* mask;
 
 % Plot all results
 figure;
 
 subplot(3,1,1);
-stem(n, real(x_reconstructed), 'filled');
-title('Original Signal Reconstructed Using IFFT');
+stem(n, real(x), 'filled');
+title('Original Signal in Time Domain');
 xlabel('Sample Index n');
 ylabel('Amplitude');
 grid on;
