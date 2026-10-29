@@ -34,7 +34,7 @@ grid on;
 
 subplot(3,1,2);
 stem(f(1:N/2+1), abs(X(1:N/2+1)), 'filled');
-title('Original DFT Spectrum');
+title('Discrete FFT Frequency Spectrum');
 xlabel('Frequency (Hz)');
 ylabel('Magnitude');
 grid on;
