@@ -41,7 +41,7 @@ grid on;
 
 subplot(3,1,3);
 stem(f(1:N/2+1), abs(X_filtered(1:N/2+1)), 'filled');
-title('Filtered DFT Spectrum');
+title('Filtered FFT Spectrum');
 xlabel('Frequency (Hz)');
 ylabel('Magnitude');
 grid on;
