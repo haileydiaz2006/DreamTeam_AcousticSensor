@@ -3,7 +3,7 @@
 ## Variables
 * Signal Length 
 * Sampling Frequency (# of samples a second)
-* n from 0 to sample length -1, incremented by 1
+* Sampling index: n; from 0 to sample length -1, incremented by 1
 
 ## Functions 
 * Gave the program a discrete time vector and plotted the given signal in time domain. If we're sampling, we'll be using discrete time signals rather than continuous. 
